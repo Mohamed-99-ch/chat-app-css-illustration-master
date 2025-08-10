@@ -1,0 +1,40 @@
+@media (max-width: 375px) {
+    body {
+        overflow: auto;
+    }
+    
+    body::before {
+        height: 400px;
+        width: 200px;
+        left: -80px;
+    }
+
+    body::after {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        height: fit-content;
+        flex-flow: row wrap;
+    }
+
+    .container .phone {
+        order: 1;
+        margin: 50px auto;
+    }
+
+    .container .text {
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container .text h1 {
+        width: 100%;
+    }
+
+    .container .text .disc {
+        padding-right: 0;
+    }
+}

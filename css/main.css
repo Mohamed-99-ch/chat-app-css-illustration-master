@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(270, 20%, 96%);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    font-family: "Rubik";
+}
+
+body::before,
+body::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
+
+body::before {
+    top: 0;
+    left: -70px;
+    width: 30%;
+    height: 80%;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+    background-image: linear-gradient(60deg,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+}
+
+body::after {
+    bottom: 0;
+    right: -100px;
+    height: 80%;
+    width: 30%;
+    background-color: hsl(270, 7%, 64%);
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    opacity: 0.2;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.phone {
+    border: 2px solid black;
+    border-radius: 20px;
+    border: 5px solid white;
+    background-color: hsl(270, 20%, 96%);
+    width: 300px;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: 200px;
+    position: relative;
+    /* transform: scale(0.7); */
+}
+
+.phone::before {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 25px;
+    top: 0;
+    left: 15%;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.phone .head {
+    width: 100%;
+    height: 90px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-image: linear-gradient(10deg,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.phone .head i {
+    color: white;
+}
+
+.phone .head img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+    margin-left: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.phone .head .prof {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.phone .head .prof .job {
+    font-size: 12px;
+    color: hsl(206, 6%, 79%);
+    margin-top: 5px;
+}
+
+.phone .chat {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5px;
+    font-size: 12px;
+    padding: 10px;
+    font-size: 8px;
+}
+
+.phone .chat > div {
+    padding: 10px;
+    width: 100%;
+    transform: scale(0.9,0.8);
+}
+
+.phone .chat .text-1, 
+.phone .chat .text-2,
+.phone .chat .text-4,
+.phone .chat .text-5,
+.phone .chat .text-6 {
+    border-radius: 10px;
+}
+
+.phone .chat .text-1, 
+.phone .chat .text-2,
+.phone .chat .text-6 {
+    background-color: #ddd;
+    color: hsl(276, 55%, 52%);
+    width: 70%;
+}
+
+.phone .chat .text-3 {
+    width: 70%;
+    margin-left: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone .chat .text-3 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.phone .chat .text-4,
+.phone .chat .text-5 {
+    width: 70%;
+    margin-left: 30%;
+    color: hsl(270, 7%, 64%);
+    box-shadow: 4px 4px 5px #ddd;
+}
+
+.phone .chat .text-7,
+.phone .chat .text-8 {
+    width: 85%;
+    padding: 5px;
+    border-radius: 10px;
+    background-image: linear-gradient(10deg,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+    border-bottom-left-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.phone .chat .text-7 .circle,
+.phone .chat .text-8 .circle {
+    padding: 10px;
+    border: 2px solid hsl(270, 7%, 64%);
+    border-radius: 50%;
+}
+
+.phone .chat input {
+    width: 100%;
+    background-color: white;
+    color: hsl(270, 7%, 64%);
+    border-radius: 30px;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+
+.container .text {
+    width: 60%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+}
+
+.container .text h1 {
+    color: hsl(271, 36%, 24%);
+}
+
+.container .text .disc {
+    color: hsl(270, 7%, 64%);
+    padding-right: 250px;
+    line-height: 25px;
+}
